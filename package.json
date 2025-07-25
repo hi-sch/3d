@@ -1,0 +1,71 @@
+{
+  "name": "3d",
+  "version": "1.0.0",
+  "description": "3D - Figma plugin for converting 3D models and SVGs to scalable SVG graphics",
+  "main": "dist/plugin.js",
+  "packageManager": "npm@10.0.0",
+  "scripts": {
+    "build": "npm run clean && webpack --mode=production",
+    "start": "npm run clean && webpack --mode=development --watch",
+    "dev": "npm run start",
+    "clean": "rimraf dist",
+    "package": "npx turbo run build && zip -r 3d_plugin.zip manifest.json dist/",
+    "publish": "npm run package",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "type-check": "tsc --noEmit",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "figma",
+    "plugin",
+    "3d",
+    "svg",
+    "threejs",
+    "gltf",
+    "glb",
+    "converter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "three": "0.178.0",
+    "three-mesh-bvh": "^0.9.1",
+    "three-mesh-halfedge": "^1.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@figma/plugin-typings": "^1.99.0",
+    "@types/node": "^20.12.0",
+    "@types/three": "0.178.1",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "babel-loader": "^10.0.0",
+    "buffer": "^6.0.3",
+    "css-loader": "^6.10.0",
+    "eslint": "^8.57.0",
+    "html-webpack-plugin": "^5.6.0",
+    "process": "^0.11.10",
+    "react-dev-utils": "^12.0.1",
+    "rimraf": "^5.0.5",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "turbo": "latest",
+    "typescript": "^5.4.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/3d.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/3d/issues"
+  },
+  "homepage": "https://github.com/username/3d#readme"
+}

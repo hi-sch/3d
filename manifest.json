@@ -1,0 +1,26 @@
+{
+  "name": "3D Plugin",
+  "id": "3d_plugin",
+  "api": "1.0.0",
+  "main": "dist/plugin.js",
+  "ui": "dist/ui.html",
+  "documentAccess": "dynamic-page",
+  "editorType": ["figma"],
+  "permissions": [],
+  "networkAccess": {
+    "allowedDomains": ["https://figma.com"],
+    "reasoning": "Plugin loads 3D models from user files."
+  },
+  "relaunchButtons": [
+    {
+      "command": "open",
+      "name": "Open 3D Plugin"
+    }
+  ],
+  "menu": [
+    {
+      "name": "3D Plugin",
+      "command": "open"
+    }
+  ]
+}
